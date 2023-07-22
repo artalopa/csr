@@ -22,14 +22,14 @@ class NewsController extends Controller
         $news = $this->news->getPaginate();
         $recent = $this->news->getRecent();
         $slider = $this->news->getSlider();
-        return view('news.index', compact(['news', 'recent', 'slider']));
+        return view('information_news.index', compact(['news', 'recent', 'slider']));
     }
 
     public function show($slug)
     {
         $news = $this->news->getDetail($slug);
         $recent = $this->news->getRecent();
-        return view('news.show', compact(['news', 'recent']));
+        return view('information_news.show', compact(['news', 'recent']));
     }
 
     public function getByCategory($slug)
@@ -37,6 +37,6 @@ class NewsController extends Controller
         $category = $this->category->getDetail($slug);
         $news = $this->news->getByCategory($category->id);
 
-        return view('news.category', compact('category', 'news'));
+        return view('information_news.category', compact('category', 'news'));
     }
 }

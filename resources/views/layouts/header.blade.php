@@ -210,19 +210,20 @@
                                             <ul class="dropdown-menu">
                                                 <li>
                                                     <a class="dropdown-item"
-                                                        href="{{ url('/information/csr-about') }}">Si Moncer</a>
+                                                        href="{{ route('simoncer-web.index') }}">Si
+                                                        Moncer</a>
                                                 </li>
                                                 <li>
                                                     <a class="dropdown-item"
-                                                        href="{{ url('/information/csr-about') }}">Tentang CSR</a>
+                                                        href="{{ route('csr-about-web.index') }}">Tentang CSR</a>
                                                 </li>
                                                 <li>
                                                     <a class="dropdown-item"
-                                                        href="{{ url('/information/csr-about') }}">Program CSR</a>
+                                                        href="{{ route('csr-program-web.index') }}">Program CSR</a>
                                                 </li>
                                                 <li>
                                                     <a class="dropdown-item"
-                                                        href="{{ url('/information/csr-about') }}">Sektor CSR</a>
+                                                        href="{{ route('csr-sector-web.index') }}">Sektor CSR</a>
                                                 </li>
                                                 <li>
                                                     <a class="dropdown-item"

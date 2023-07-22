@@ -14,25 +14,25 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                         aria-expanded="false">
-                        <i class="mdi mdi-folder-multiple-image"></i>
+                        <i class="mdi mdi-account-multiple"></i>
                         <span class="hide-menu">Profil </span>
                     </a>
                     <ul aria-expanded="false" class="collapse first-level">
                         <li class="sidebar-item">
                             <a href="{{ route('profile-jepara.index') }}" class="sidebar-link">
-                                <i class="mdi mdi-sale"></i>
+                                <i class="mdi mdi-view-list"></i>
                                 <span class="hide-menu"> Kapupaten Jepara </span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a href="{{ route('profile-komite.index') }}" class="sidebar-link">
-                                <i class="mdi mdi-percent"></i>
+                                <i class="mdi mdi-view-list"></i>
                                 <span class="hide-menu"> Komite TSP </span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a href="{{ route('profile-regulasi.index') }}" class="sidebar-link">
-                                <i class="mdi mdi-percent"></i>
+                                <i class="mdi mdi-view-list"></i>
                                 <span class="hide-menu"> Regulasi </span>
                             </a>
                         </li>
@@ -41,19 +41,19 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                         aria-expanded="false">
-                        <i class="mdi mdi-folder-multiple-image"></i>
+                        <i class="mdi mdi-account-multiple"></i>
                         <span class="hide-menu">Komite TSP </span>
                     </a>
                     <ul aria-expanded="false" class="collapse first-level">
                         <li class="sidebar-item">
                             <a href="{{ route('komite-tsp.index') }}" class="sidebar-link">
-                                <i class="mdi mdi-sale"></i>
+                                <i class="mdi mdi-account"></i>
                                 <span class="hide-menu"> Daftar Anggota </span>
                             </a>
                         </li>
                         <li class="sidebar-item">
                             <a href="{{ route('komite-tsp.create') }}" class="sidebar-link">
-                                <i class="mdi mdi-percent"></i>
+                                <i class="mdi mdi-account-plus"></i>
                                 <span class="hide-menu"> Tambah Anggota </span>
                             </a>
                         </li>
@@ -62,8 +62,116 @@
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                         aria-expanded="false">
-                        <i class="mdi mdi-shopping"></i>
-                        <span class="hide-menu">Berita </span>
+                        <i class="mdi mdi-newspaper"></i>
+                        <span class="hide-menu">Informasi Simoncer </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a href="{{ route('simoncer.index') }}" class="sidebar-link">
+                                <i class="mdi mdi-view-list"></i>
+                                <span class="hide-menu"> Daftar Informasi </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('simoncer.create') }}" class="sidebar-link">
+                                <i class="mdi mdi-database-plus"></i>
+                                <span class="hide-menu"> Tambah Informasi </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('simoncer-category.index') }}" class="sidebar-link">
+                                <i class="mdi mdi-playlist-plus"></i>
+                                <span class="hide-menu"> Kategori Informasi </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                        aria-expanded="false">
+                        <i class="mdi mdi-newspaper"></i>
+                        <span class="hide-menu">Tentang CSR </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a href="{{ route('csr-about.index') }}" class="sidebar-link">
+                                <i class="mdi mdi-view-list"></i>
+                                <span class="hide-menu"> Daftar Informasi </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('csr-about.create') }}" class="sidebar-link">
+                                <i class="mdi mdi-database-plus"></i>
+                                <span class="hide-menu"> Tambah Informasi </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('csr-about-category.index') }}" class="sidebar-link">
+                                <i class="mdi mdi-playlist-plus"></i>
+                                <span class="hide-menu"> Kategori Informasi </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                        aria-expanded="false">
+                        <i class="mdi mdi-newspaper"></i>
+                        <span class="hide-menu">Program CSR </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a href="{{ route('csr-program.index') }}" class="sidebar-link">
+                                <i class="mdi mdi-view-list"></i>
+                                <span class="hide-menu"> Daftar Program </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('csr-program.create') }}" class="sidebar-link">
+                                <i class="mdi mdi-database-plus"></i>
+                                <span class="hide-menu"> Tambah Program </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('csr-program-category.index') }}" class="sidebar-link">
+                                <i class="mdi mdi-playlist-plus"></i>
+                                <span class="hide-menu"> Kategori Program </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                        aria-expanded="false">
+                        <i class="mdi mdi-newspaper"></i>
+                        <span class="hide-menu">Sektor CSR </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item">
+                            <a href="{{ route('csr-sector.index') }}" class="sidebar-link">
+                                <i class="mdi mdi-view-list"></i>
+                                <span class="hide-menu"> Daftar Informasi Sektor </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('csr-sector.create') }}" class="sidebar-link">
+                                <i class="mdi mdi-database-plus"></i>
+                                <span class="hide-menu"> Tambah Informasi Sektor </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="{{ route('csr-sector-category.index') }}" class="sidebar-link">
+                                <i class="mdi mdi-playlist-plus"></i>
+                                <span class="hide-menu"> Kategori Sektor </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
+                        aria-expanded="false">
+                        <i class="mdi mdi-newspaper"></i>
+                        <span class="hide-menu">Berita CSR </span>
                     </a>
                     <ul aria-expanded="false" class="collapse first-level">
                         <li class="sidebar-item">
@@ -140,31 +248,10 @@
                         </li>
                     </ul>
                 </li>
-                {{-- <li class="sidebar-item">
-                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                        aria-expanded="false">
-                        <i class="mdi mdi-folder-multiple-image"></i>
-                        <span class="hide-menu">Banner </span>
-                    </a>
-                    <ul aria-expanded="false" class="collapse first-level">
-                        <li class="sidebar-item">
-                            <a href="{{ route('banner-home.index') }}" class="sidebar-link">
-                                <i class="mdi mdi-sale"></i>
-                                <span class="hide-menu"> Banner Home </span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="form-basic.html" class="sidebar-link">
-                                <i class="mdi mdi-percent"></i>
-                                <span class="hide-menu"> Banner Iklan </span>
-                            </a>
-                        </li>
-                    </ul>
-                </li> --}}
                 <li class="sidebar-item">
                     <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
                         aria-expanded="false">
-                        <i class="mdi mdi-folder-multiple-image"></i>
+                        <i class="mdi mdi-file-document-box"></i>
                         <span class="hide-menu">Laporan </span>
                     </a>
                     <ul aria-expanded="false" class="collapse first-level">
@@ -194,13 +281,6 @@
                         </li>
                     </ul>
                 </li>
-                {{-- <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('about.index') }}"
-                        aria-expanded="false">
-                        <i class="mdi mdi-information"></i>
-                        <span class="hide-menu">Tentang Kami</span>
-                    </a>
-                </li> --}}
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link"
                         href="{{ route('information.index') }}" aria-expanded="false">
@@ -208,13 +288,6 @@
                         <span class="hide-menu">Informasi Kontak</span>
                     </a>
                 </li>
-                {{-- <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="index.html"
-                        aria-expanded="false">
-                        <i class="mdi mdi-share"></i>
-                        <span class="hide-menu">Media Sosial</span>
-                    </a>
-                </li> --}}
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="#"
                         aria-expanded="false">

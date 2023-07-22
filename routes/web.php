@@ -3,11 +3,15 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\CsrAboutController;
+use App\Http\Controllers\CsrProgramController;
+use App\Http\Controllers\CsrSectorController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\GalleryCommitteeController;
 use App\Http\Controllers\GalleryCsrController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\SimoncerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -70,9 +74,18 @@ Route::prefix('/profile')->group(function () {
 });
 
 Route::prefix('/information')->group(function () {
-    Route::get('/csr-about', function () {
-        return view('informations.about');
-    });
+    Route::get('/simoncer', [SimoncerController::class, 'index'])->name('simoncer-web.index');
+    Route::get('/simoncer/{slug}', [SimoncerController::class, 'show'])->name('simoncer-web.show');
+
+    Route::get('/csr-about', [CsrAboutController::class, 'index'])->name('csr-about-web.index');
+    Route::get('/csr-about/{slug}', [CsrAboutController::class, 'show'])->name('csr-about-web.show');
+
+    Route::get('/csr-program', [CsrProgramController::class, 'index'])->name('csr-program-web.index');
+    Route::get('/csr-program/{slug}', [CsrProgramController::class, 'show'])->name('csr-program-web.show');
+
+    Route::get('/csr-sector', [CsrSectorController::class, 'index'])->name('csr-sector-web.index');
+    Route::get('/csr-sector/{slug}', [CsrSectorController::class, 'show'])->name('csr-sector-web.show');
+
     Route::get('/csr-news', [NewsController::class, 'index'])->name('news-web.index');
     Route::get('/csr-news/{slug}', [NewsController::class, 'show'])->name('news-web.show');
 });

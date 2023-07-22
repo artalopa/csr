@@ -1,6 +1,6 @@
 @extends('layouts.general')
 
-@section('sub_title-1', 'Berita')
+@section('sub_title-1', 'Si Moncer')
 @section('sub_title-2')
     <li class="breadcrumb-item">
         <a href="{{ url('/') }}">
@@ -8,7 +8,7 @@
         </a>
     </li>
 @endsection
-@section('sub_title-3', 'Berita')
+@section('sub_title-3', 'Si Moncer')
 
 @section('content')
 
@@ -26,7 +26,7 @@
                             <div class="carousel-inner h-25 ">
                                 @foreach ($slider as $slider)
                                     <div class="carousel-item">
-                                        <img src="{{ asset('uploads/news/' . $slider->image) }}"
+                                        <img src="{{ asset('uploads/simoncer/' . $slider->image) }}"
                                             class="d-block w-100 carousel-img-news rounded" alt="..."
                                             style="filter: brightness(70%)">
                                         <div class="corousel-item__title">
@@ -48,14 +48,14 @@
                         </div>
 
                         {{-- preview: 12 berita --}}
-                        @foreach ($news as $result => $key)
+                        @foreach ($simoncer as $result => $key)
                             <div class="col-xxl-4 col-sm-6">
                                 <div class="blog-box wow fadeInUp">
                                     <div class="blog-image">
-                                        <a href="{{ route('news-web.show', ['slug' => $key->slug]) }}"
+                                        <a href="{{ route('simoncer-web.show', ['slug' => $key->slug]) }}"
                                             class="bg-size blur-up lazyload"
-                                            style="background-image: url(&quot;{{ asset('uploads/news/' . $key->image) }}&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
-                                            <img src="{{ asset('uploads/news/' . $key->image) }}"
+                                            style="background-image: url(&quot;{{ asset('uploads/simoncer/' . $key->image) }}&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                                            <img src="{{ asset('uploads/simoncer/' . $key->image) }}"
                                                 class="bg-img blur-up lazyload" alt="">
                                         </a>
                                     </div>
@@ -67,11 +67,11 @@
                                             <span class="super"><i data-feather="user"></i> <span>Mark J.
                                                     Speight</span></span>
                                         </div>
-                                        <a href="{{ route('news-web.show', ['slug' => $key->slug]) }}">
+                                        <a href="{{ route('simoncer-web.show', ['slug' => $key->slug]) }}">
                                             <h3>{{ $key->title }}</h3>
                                         </a>
                                         <button
-                                            onclick="location.href = '{{ route('news-web.show', ['slug' => $key->slug]) }}';"
+                                            onclick="location.href = '{{ route('simoncer-web.show', ['slug' => $key->slug]) }}';"
                                             class="blog-button">Read
                                             More
                                             <i class="fa-solid fa-right-long"></i></button>
@@ -83,7 +83,7 @@
 
                     <nav class="custome-pagination">
                         <ul class="pagination justify-content-center">
-                            {{ $news->links() }}
+                            {{ $simoncer->links() }}
                         </ul>
                     </nav>
                 </div>
@@ -98,7 +98,7 @@
                         </div>
 
                         {{-- Recent post --}}
-                        @include('news.components.recent-post')
+                        @include('information_simoncer.components.recent-post')
                         {{-- Recent post end --}}
 
                     </div>

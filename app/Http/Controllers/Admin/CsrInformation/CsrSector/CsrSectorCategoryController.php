@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Admin\News;
+namespace App\Http\Controllers\Admin\CsrInformation\CsrSector;
 
 use App\Http\Controllers\Controller;
-use App\Models\NewsCategory;
+use App\Models\CsrSectorCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use RealRashid\SweetAlert\Facades\Alert;
 
-class NewsCategoryController extends Controller
+class CsrSectorCategoryController extends Controller
 {
     protected $category;
 
-    public function __construct(NewsCategory $category)
+    public function __construct(CsrSectorCategory $category)
     {
         $this->category = $category;
     }
@@ -21,13 +21,13 @@ class NewsCategoryController extends Controller
     public function index()
     {
         $categories = $this->category->getPaginate();
-        return view('admin.information_news.category.index', compact('categories'));
+        return view('admin.information_csr_sector.category.index', compact('categories'));
     }
 
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'required|string|max:255|unique:news_categories,name,',
+            'name' => 'required|string|max:255|unique:csr_sector_categories,name,',
             'image' => 'nullable|mimes:png,jpg,jpeg|max:2048',
             'description' => 'nullable'
         ]);
@@ -57,7 +57,7 @@ class NewsCategoryController extends Controller
         $category = $this->category->getDetail($slug);
 
         $this->validate($request, [
-            'name' => 'required|string|max:255|unique:news_categories,name,' . $category->id,
+            'name' => 'required|string|max:255|unique:csr_sector_categories,name,' . $category->id,
             'image' => 'nullable|mimes:png,jpg,jpeg',
             'description' => 'nullable'
         ]);

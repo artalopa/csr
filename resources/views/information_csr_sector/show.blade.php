@@ -1,6 +1,6 @@
 @extends('layouts.general')
 
-@section('sub_title-1', 'Berita')
+@section('sub_title-1', 'Sektor CSR')
 @section('sub_title-2')
     <li class="breadcrumb-item">
         <a href="{{ url('/') }}">
@@ -8,13 +8,13 @@
         </a>
     </li>
     <li class="breadcrumb-item">
-        <a href="{{ route('news-web.index') }}">
-            Berita
+        <a href="{{ route('csr-sector-web.index') }}">
+            Sektor CSR
         </a>
     </li>
 @endsection
 @section('sub_title-3')
-    {{ Str::limit($news->title, 30) }}
+    {{ Str::limit($csr_sector->title, 30) }}
 @endsection
 
 @section('content')
@@ -27,18 +27,18 @@
             <div class="row g-sm-4 g-3">
                 <div class="col-xxl-9 col-xl-8 col-lg-7 ratio_50">
                     <div class="blog-detail-image rounded-3 mb-4 bg-size blur-up lazyloaded"
-                        style="background-image: url(&quot;{{ asset('uploads/news/' . $news->image) }}&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
-                        <img src="{{ asset('uploads/news/' . $news->image) }}" class="bg-img blur-up lazyload"
+                        style="background-image: url(&quot;{{ asset('uploads/csr_sector/' . $csr_sector->image) }}&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat; display: block;">
+                        <img src="{{ asset('uploads/csr_sector/' . $csr_sector->image) }}" class="bg-img blur-up lazyload"
                             alt="">
                         <div class="blog-image-contain">
                             <ul class="contain-list">
                                 <li>
-                                    {{ $news->NewsCategory->name ?? 'Uncategorized' }}
+                                    {{ $csr_sector->CsrSectorCategory->name ?? 'Uncategorized' }}
                                 </li>
                                 {{-- <li>life style</li> --}}
                                 {{-- <li>organic</li> --}}
                             </ul>
-                            <h2>{{ $news->title }}</h2>
+                            <h2>{{ $csr_sector->title }}</h2>
                             <ul class="contain-comment-list">
                                 <li>
                                     <div class="user-list">
@@ -50,7 +50,7 @@
                                 <li>
                                     <div class="user-list">
                                         <i data-feather="calendar"></i>
-                                        <span>{{ Str::limit($news->created_at, 10, '') }}</span>
+                                        <span>{{ Str::limit($csr_sector->created_at, 10, '') }}</span>
                                     </div>
                                 </li>
 
@@ -73,7 +73,7 @@
                             please use "solutionise" instead of solution ideas! :) i am dead inside. Quick sync
                             4-blocker. Driving the initiative forward flesh that out.</p> --}}
 
-                        {!! $news->description !!}
+                        {!! $csr_sector->description !!}
 
                         <div class="blog-details-quote">
                             <h3>Adipisicing elit Qui ipsam natus aspernatur quaerat impedit eveniet ipsum dolor</h3>
@@ -249,7 +249,7 @@
                         </div>
 
                         {{-- Recent post --}}
-                        @include('news.components.recent-post')
+                        @include('information_csr_sector.components.recent-post')
                         {{-- Recent post end --}}
                     </div>
                 </div>

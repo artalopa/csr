@@ -2,6 +2,14 @@
 
 use App\Http\Controllers\Admin\About\AboutController;
 use App\Http\Controllers\Admin\Banner\BannerHomeController;
+use App\Http\Controllers\Admin\CsrInformation\CsrAbout\CsrAboutCategoryController;
+use App\Http\Controllers\Admin\CsrInformation\CsrAbout\CsrAboutController;
+use App\Http\Controllers\Admin\CsrInformation\CsrProgram\CsrProgramCategoryController;
+use App\Http\Controllers\Admin\CsrInformation\CsrProgram\CsrProgramController;
+use App\Http\Controllers\Admin\CsrInformation\CsrSector\CsrSectorCategoryController;
+use App\Http\Controllers\Admin\CsrInformation\CsrSector\CsrSectorController;
+use App\Http\Controllers\Admin\CsrInformation\Simoncer\SimoncerCategoryController;
+use App\Http\Controllers\Admin\CsrInformation\Simoncer\SimoncerController;
 use App\Http\Controllers\Admin\Gallery\GalleryCommitteeCategoryController;
 use App\Http\Controllers\Admin\Gallery\GalleryCommitteeController;
 use App\Http\Controllers\Admin\Gallery\GalleryCsrCategoryController;
@@ -20,6 +28,70 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
         return view('admin.dashboard');
     })->name('dashboard');
+
+    // Simoncer
+    Route::prefix('/simoncer')->group(function () {
+        Route::get('/', [SimoncerController::class, 'index'])->name('simoncer.index');
+        Route::get('/create', [SimoncerController::class, 'create'])->name('simoncer.create');
+        Route::post('/store', [SimoncerController::class, 'store'])->name('simoncer.store');
+        Route::get('/edit/{slug}', [SimoncerController::class, 'edit'])->name('simoncer.edit');
+        Route::patch('/update/{slug}', [SimoncerController::class, 'update'])->name('simoncer.update');
+        Route::delete('/destroy/{slug}', [SimoncerController::class, 'destroy'])->name('simoncer.destroy');
+        Route::prefix('/category')->group(function () {
+            Route::get('/', [SimoncerCategoryController::class, 'index'])->name('simoncer-category.index');
+            Route::post('/store', [SimoncerCategoryController::class, 'store'])->name('simoncer-category.store');
+            Route::patch('/update/{slug}', [SimoncerCategoryController::class, 'update'])->name('simoncer-category.update');
+            Route::delete('/destroy/{slug}', [SimoncerCategoryController::class, 'destroy'])->name('simoncer-category.destroy');
+        });
+    });
+
+    // Csr About
+    Route::prefix('/csr-about')->group(function () {
+        Route::get('/', [CsrAboutController::class, 'index'])->name('csr-about.index');
+        Route::get('/create', [CsrAboutController::class, 'create'])->name('csr-about.create');
+        Route::post('/store', [CsrAboutController::class, 'store'])->name('csr-about.store');
+        Route::get('/edit/{slug}', [CsrAboutController::class, 'edit'])->name('csr-about.edit');
+        Route::patch('/update/{slug}', [CsrAboutController::class, 'update'])->name('csr-about.update');
+        Route::delete('/destroy/{slug}', [CsrAboutController::class, 'destroy'])->name('csr-about.destroy');
+        Route::prefix('/category')->group(function () {
+            Route::get('/', [CsrAboutCategoryController::class, 'index'])->name('csr-about-category.index');
+            Route::post('/store', [CsrAboutCategoryController::class, 'store'])->name('csr-about-category.store');
+            Route::patch('/update/{slug}', [CsrAboutCategoryController::class, 'update'])->name('csr-about-category.update');
+            Route::delete('/destroy/{slug}', [CsrAboutCategoryController::class, 'destroy'])->name('csr-about-category.destroy');
+        });
+    });
+
+    // Csr Program
+    Route::prefix('/csr-program')->group(function () {
+        Route::get('/', [CsrProgramController::class, 'index'])->name('csr-program.index');
+        Route::get('/create', [CsrProgramController::class, 'create'])->name('csr-program.create');
+        Route::post('/store', [CsrProgramController::class, 'store'])->name('csr-program.store');
+        Route::get('/edit/{slug}', [CsrProgramController::class, 'edit'])->name('csr-program.edit');
+        Route::patch('/update/{slug}', [CsrProgramController::class, 'update'])->name('csr-program.update');
+        Route::delete('/destroy/{slug}', [CsrProgramController::class, 'destroy'])->name('csr-program.destroy');
+        Route::prefix('/category')->group(function () {
+            Route::get('/', [CsrProgramCategoryController::class, 'index'])->name('csr-program-category.index');
+            Route::post('/store', [CsrProgramCategoryController::class, 'store'])->name('csr-program-category.store');
+            Route::patch('/update/{slug}', [CsrProgramCategoryController::class, 'update'])->name('csr-program-category.update');
+            Route::delete('/destroy/{slug}', [CsrProgramCategoryController::class, 'destroy'])->name('csr-program-category.destroy');
+        });
+    });
+
+    // Csr Sector
+    Route::prefix('/csr-sector')->group(function () {
+        Route::get('/', [CsrSectorController::class, 'index'])->name('csr-sector.index');
+        Route::get('/create', [CsrSectorController::class, 'create'])->name('csr-sector.create');
+        Route::post('/store', [CsrSectorController::class, 'store'])->name('csr-sector.store');
+        Route::get('/edit/{slug}', [CsrSectorController::class, 'edit'])->name('csr-sector.edit');
+        Route::patch('/update/{slug}', [CsrSectorController::class, 'update'])->name('csr-sector.update');
+        Route::delete('/destroy/{slug}', [CsrSectorController::class, 'destroy'])->name('csr-sector.destroy');
+        Route::prefix('/category')->group(function () {
+            Route::get('/', [CsrSectorCategoryController::class, 'index'])->name('csr-sector-category.index');
+            Route::post('/store', [CsrSectorCategoryController::class, 'store'])->name('csr-sector-category.store');
+            Route::patch('/update/{slug}', [CsrSectorCategoryController::class, 'update'])->name('csr-sector-category.update');
+            Route::delete('/destroy/{slug}', [CsrSectorCategoryController::class, 'destroy'])->name('csr-sector-category.destroy');
+        });
+    });
 
     // News
     Route::prefix('/news')->group(function () {
