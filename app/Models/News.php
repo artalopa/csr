@@ -31,12 +31,12 @@ class News extends Model
 
     public function getRecent()
     {
-        return $this->select('title', 'slug', 'news_category_id', 'image', 'created_at')->orderBy('id', 'desc')->paginate(4);
+        return $this->select('title', 'slug', 'news_category_id', 'image', 'created_at')->orderBy('id', 'desc')->limit(4)->get();
     }
 
     public function getSlider()
     {
-        return $this->select('title', 'slug', 'news_category_id', 'image')->orderBy('id', 'desc')->paginate(3);
+        return $this->select('title', 'slug', 'news_category_id', 'image')->orderBy('id', 'desc')->limit(3)->get();
     }
 
     public function getHome()
