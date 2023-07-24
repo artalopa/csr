@@ -166,9 +166,8 @@
         // pagination
         $('.page-item:first-child .page-link').html('<i class="fa-solid fa-angles-left"></i>')
         $('.page-item:last-child .page-link').html('<i class="fa-solid fa-angles-right"></i>')
-
-        @yield('script')
     </script>
+    @yield('script')
 </body>
 
 </html>

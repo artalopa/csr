@@ -49,11 +49,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="slider-6_1 product-wrapper">
+
                         <div>
                             <div class="wow fadeInUp">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <img src="{{ asset('assets/user/images/mitra-1.png') }}"
+                                        <img src="{{ asset('assets/user/logo/logo kanindo.png') }}"
                                             class="img-fluid blur-up lazyload" style="height :150px" alt="">
                                     </div>
                                 </div>
@@ -63,7 +64,7 @@
                             <div class="wow fadeInUp">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <img src="{{ asset('assets/user/images/mitra-1.png') }}"
+                                        <img src="{{ asset('assets/user/logo/logo kpjb.png') }}"
                                             class="img-fluid blur-up lazyload" style="height :150px" alt="">
                                     </div>
                                 </div>
@@ -73,7 +74,7 @@
                             <div class="wow fadeInUp">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <img src="{{ asset('assets/user/images/mitra-1.png') }}"
+                                        <img src="{{ asset('assets/user/logo/logo PDAM.png') }}"
                                             class="img-fluid blur-up lazyload" style="height :150px" alt="">
                                     </div>
                                 </div>
@@ -83,7 +84,7 @@
                             <div class="wow fadeInUp">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <img src="{{ asset('assets/user/images/mitra-1.png') }}"
+                                        <img src="{{ asset('assets/user/logo/logo pijar.png') }}"
                                             class="img-fluid blur-up lazyload" style="height :150px" alt="">
                                     </div>
                                 </div>
@@ -93,7 +94,7 @@
                             <div class="wow fadeInUp">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <img src="{{ asset('assets/user/images/mitra-1.png') }}"
+                                        <img src="{{ asset('assets/user/logo/logo samwon.png') }}"
                                             class="img-fluid blur-up lazyload" style="height :150px" alt="">
                                     </div>
                                 </div>
@@ -103,12 +104,23 @@
                             <div class="wow fadeInUp">
                                 <div class="product-header">
                                     <div class="product-image">
-                                        <img src="{{ asset('assets/user/images/mitra-1.png') }}"
-                                            class="img-fluid blur-up lazyload" alt="">
+                                        <img src="{{ asset('assets/user/logo/logo wanxinda.png') }}"
+                                            class="img-fluid blur-up lazyload" style="height :150px" alt="">
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div>
+                            <div class="wow fadeInUp">
+                                <div class="product-header">
+                                    <div class="product-image">
+                                        <img src="{{ asset('assets/user/logo/Logo Perumda.png') }}"
+                                            class="img-fluid blur-up lazyload" style="height :150px" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -160,7 +172,7 @@
                                     <div class="slider-7_1 shop-box no-arrow product-wrapper">
                                         <div id="ket1">
                                             <div class="shop-category-box">
-                                                <a href="shop-left-sidebar.html">
+                                                <a href="#">
                                                     <div class="shop-category-image">
                                                         <img src="{{ asset('assets/user/images/icon/icon pendidikan.png') }}"
                                                             class="blur-up lazyload" alt="">
@@ -173,7 +185,7 @@
                                         </div>
                                         <div id="ket1">
                                             <div class="shop-category-box">
-                                                <a href="shop-left-sidebar.html">
+                                                <a href="#">
                                                     <div class="shop-category-image">
                                                         <img src="{{ asset('assets/user/images/icon/Icon Kesehatan.png') }}"
                                                             class="blur-up lazyload" alt="">
@@ -186,7 +198,7 @@
                                         </div>
                                         <div id="ket1">
                                             <div class="shop-category-box">
-                                                <a href="shop-left-sidebar.html">
+                                                <a href="#">
                                                     <div class="shop-category-image">
                                                         <img src="{{ asset('assets/user/images/icon/Icon Lingkungan.png') }}"
                                                             class="blur-up lazyload" alt="">
@@ -199,7 +211,7 @@
                                         </div>
                                         <div id="ket1">
                                             <div class="shop-category-box">
-                                                <a href="shop-left-sidebar.html">
+                                                <a href="#">
                                                     <div class="shop-category-image">
                                                         <img src="{{ asset('assets/user/images/icon/icon ekonomi.png') }}"
                                                             class="blur-up lazyload" alt="">
@@ -212,22 +224,9 @@
                                         </div>
                                         <div id="ket1">
                                             <div class="shop-category-box">
-                                                <a href="shop-left-sidebar.html">
+                                                <a href="#">
                                                     <div class="shop-category-image">
                                                         <img src="{{ asset('assets/user/images/icon/icon infrastruktur.png') }}"
-                                                            class="blur-up lazyload" alt="">
-                                                    </div>
-                                                    <div class="category-box-name">
-                                                        <h6>Infrastruktur</h6>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div id="ket1">
-                                            <div class="shop-category-box">
-                                                <a href="shop-left-sidebar.html">
-                                                    <div class="shop-category-image">
-                                                        <img src="{{ asset('assets/user/images/icon/company.png') }}"
                                                             class="blur-up lazyload" alt="">
                                                     </div>
                                                     <div class="category-box-name">
@@ -360,4 +359,7 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('script')
 @endsection
