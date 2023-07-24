@@ -3,7 +3,7 @@
         <div class="navbar-header" data-logobg="skin5">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <b class="logo-icon ps-2">
-                    <img src="{{ asset('assets/admin/images/logo-icon.png') }}" alt="homepage" class="light-logo"
+                    <img src="{{ asset('assets/user/logo/logo-simoncer.png') }}" alt="homepage" class="light-logo"
                         width="25" />
                 </b>
                 <span class="logo-text ms-2 pt-3">

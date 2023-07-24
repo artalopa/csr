@@ -9,7 +9,7 @@
     <meta name="robots" content="noindex,nofollow" />
     <title>DASHBOARD CSR - ADMIN</title>
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('/assets/admin/images/favicon.png') }}" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/user/logo/logo-simoncer.png') }}" />
     <!-- Custom CSS -->
     <link href="{{ asset('assets/admin/vendor/flot/css/float-chart.css') }}" rel="stylesheet" />
     <!-- Custom CSS -->
