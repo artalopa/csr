@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Senjafurniture Jepara">
     <link rel="icon" href="{{ asset('assets/user/logo/logo-simoncer.png') }}" type="image/x-icon">
-    <title>Beranda | Monitoring CSR Jepara</title>
+    <title>@yield('title') | Monitoring CSR Jepara</title>
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">

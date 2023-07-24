@@ -1,3 +1,7 @@
+@section('title')
+    {{ $csr_program->title }}
+@endsection
+
 @extends('layouts.general')
 
 @section('sub_title-1', 'Program CSR')

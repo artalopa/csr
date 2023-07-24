@@ -1,3 +1,4 @@
+@section('title', 'Komite TSP')
 @extends('layouts.general')
 @section('sub_title-1', 'Profile - Komite TSP')
 @section('sub_title-2')

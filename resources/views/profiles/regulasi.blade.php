@@ -1,3 +1,4 @@
+@section('title', 'Regulasi')
 @extends('layouts.general')
 @section('sub_title-1', 'Profile - Regulasi')
 @section('sub_title-2')

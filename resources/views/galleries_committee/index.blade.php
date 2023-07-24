@@ -1,3 +1,5 @@
+@section('title', 'Kegiatan Komite')
+
 @extends('layouts.general')
 
 @section('sub_title-1', 'Kegiatan Komite')

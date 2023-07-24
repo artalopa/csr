@@ -1,3 +1,5 @@
+@section('title', 'Laporan Perusahaan')
+
 @extends('layouts.general')
 
 @section('sub_title-1', 'Perusahaan')

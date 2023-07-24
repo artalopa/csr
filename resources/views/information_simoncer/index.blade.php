@@ -1,3 +1,4 @@
+@section('title', 'Si Moncer')
 @extends('layouts.general')
 
 @section('sub_title-1', 'Si Moncer')

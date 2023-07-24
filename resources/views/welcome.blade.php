@@ -1,3 +1,4 @@
+@section('title', 'Beranda')
 @extends('layouts.general')
 @section('content')
     <section class=" pt-2 pb-2">

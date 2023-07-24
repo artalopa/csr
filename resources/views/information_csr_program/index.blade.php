@@ -1,3 +1,5 @@
+@section('title', 'Program CSR')
+
 @extends('layouts.general')
 
 @section('sub_title-1', 'Program CSR')

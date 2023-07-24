@@ -1,3 +1,5 @@
+@section('title', 'Laporan Sektor/Bidang')
+
 @extends('layouts.general')
 
 @section('sub_title-1', 'Sektor / Bidang')

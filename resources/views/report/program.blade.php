@@ -1,3 +1,5 @@
+@section('title', 'Laporan Program')
+
 @extends('layouts.general')
 
 @section('sub_title-1', 'Program')

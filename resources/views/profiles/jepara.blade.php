@@ -1,3 +1,4 @@
+@section('title', 'Profile Kabupaten Jepara')
 @extends('layouts.general')
 @section('sub_title-1', 'Profile - Kabupaten Jepara')
 @section('sub_title-2')

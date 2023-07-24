@@ -1,3 +1,5 @@
+@section('title', 'Kontak')
+
 @extends('layouts.general')
 
 @section('sub_title-1', 'Contact Us')
