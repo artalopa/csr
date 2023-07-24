@@ -1,6 +1,6 @@
 @extends('admin.layouts.general')
 
-@section('title-content', 'EDIT GALERI')
+@section('title-content', 'EDIT KEGIATAN')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('assets/admin/vendor/quill/dist/quill.snow.css') }}">
@@ -12,7 +12,7 @@
             <a href="">Dashboard</a>
         </li>
         <li class="breadcrumb-item" aria-current="page">
-            <a href="{{ route('gallery-csr.index') }}">Galeri</a>
+            <a href="{{ route('gallery-csr.index') }}">Kegiatan CSR</a>
         </li>
         <li class="breadcrumb-item active" aria-current="page">
             {{ Str::limit($gallery->title, 5) }}
@@ -29,9 +29,9 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="mb-3">
-                            <label class="form-label">Judul Galeri <span class="text-danger">*</span></label>
+                            <label class="form-label">Judul Kegiatan <span class="text-danger">*</span></label>
                             <input type="text" name="title" class="form-control @error('title') is-invalid @enderror"
-                                placeholder="Tulis Judul Galeri" value="{{ $gallery->title }}" required>
+                                placeholder="Tulis Judul Kegiatan" value="{{ $gallery->title }}" required>
                             @error('title')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -47,9 +47,19 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="mb-3">
-                            <label class="form-label">Kategori Galeri <span class="text-danger">*</span></label>
+                            <label class="form-label">Kategori Kegiatan <span class="text-danger">*</span></label>
                             <select name="gallery_category_id" class="form-select">
-                                <option value="" disabled selected>Pilih Kategori Galeri</option>
+                                <option value="" disabled selected>Pilih Kategori Kegiatan</option>
+                                @foreach ($categories as $result)
+                                    <option value="{{ $result->id }}" @if ($result->id == $gallery->gallery_csr_category_id) selected @endif>
+                                        {{ $result->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Program Kegiatan <span class="text-danger">*</span></label>
+                            <select name="gallery_category_id" class="form-select">
+                                <option value="" disabled selected>Pilih Program Kegiatan</option>
                                 @foreach ($categories as $result)
                                     <option value="{{ $result->id }}" @if ($result->id == $gallery->gallery_csr_category_id) selected @endif>
                                         {{ $result->name }}</option>
@@ -72,7 +82,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Lokasi</label>
-                            <input type="text" name="location" class="form-control" placeholder="Tulis Lokasi Galeri"
+                            <input type="text" name="location" class="form-control" placeholder="Tulis Lokasi Kegiatan"
                                 value="{{ $gallery->location }}" required>
                         </div>
                         <div class="mb-3">
@@ -99,7 +109,7 @@
     <script>
         var quill = new Quill("#editor", {
             theme: "snow",
-            placeholder: "Tulis Deskripsi Galeri Disini"
+            placeholder: "Tulis Deskripsi Kegiatan Disini"
         });
         quill.on('text-change', function(delta, oldDelta, source) {
             document.getElementById("quill_html").value = quill.root.innerHTML;

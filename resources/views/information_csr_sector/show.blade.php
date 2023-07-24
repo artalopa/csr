@@ -69,13 +69,7 @@
                     </div>
 
                     <div class="blog-detail-contain">
-                        {{-- <p><span class="first">S</span> hotgun approach message the initiative so can I just chime in
-                            on that one. Make sure to include in your wheelhouse bells and whistles, and touch base
-                            slow-walk our commitment nor what's the status on the deliverables for eow?. Create spaces
-                            to explore whatâ€™s next commitment to the cause , or UI, for get buy-in but draw a line in
-                            the sand, and pig in a python we've got kpis for that. Message the initiative value prop,
-                            please use "solutionise" instead of solution ideas! :) i am dead inside. Quick sync
-                            4-blocker. Driving the initiative forward flesh that out.</p> --}}
+
 
                         {!! $csr_sector->description !!}
 
