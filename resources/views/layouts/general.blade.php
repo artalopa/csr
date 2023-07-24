@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Senjafurniture Jepara">
-    {{-- <link rel="icon" href="{{ asset('assets/user/logo/logo.png') }}" type="image/x-icon"> --}}
+    <link rel="icon" href="{{ asset('assets/user/logo/logo-simoncer.png') }}" type="image/x-icon">
     <title>Beranda | Monitoring CSR Jepara</title>
 
     <!-- Google font -->
