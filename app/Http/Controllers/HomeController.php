@@ -27,13 +27,13 @@ class HomeController extends Controller
     }
     public function index()
     {
-        $bannerHome = $this->bannerHome->getData();
-        $categories = $this->category->getAll();
-        $news = $this->news->getPaginate();
+        // $bannerHome = $this->bannerHome->getData();
+        // $categories = $this->category->getAll();
+        // $news = $this->news->getPaginate();
         $slider = $this->news->getSlider();
-        $recent = $this->news->getRecent();
+        $recent = $this->news->getHomeRecent();
         $kegiatanCsr = $this->kegiatanCsr->getHome();
         $kegiatanKomite = $this->kegiatanKomite->getHome();
-        return view('welcome', compact('bannerHome', 'categories', 'news', 'slider', 'recent', 'kegiatanCsr', 'kegiatanKomite'));
+        return view('welcome', compact('slider', 'recent', 'kegiatanCsr', 'kegiatanKomite'));
     }
 }

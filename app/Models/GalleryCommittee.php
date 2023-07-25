@@ -36,12 +36,12 @@ class GalleryCommittee extends Model
 
     public function getSlider()
     {
-        return $this->select('title', 'slug', 'gallery_committee_category_id', 'image')->orderBy('id', 'desc')->paginate(3);
+        return $this->select('title', 'slug', 'gallery_committee_category_id', 'image')->orderBy('id', 'desc')->limit(3)->get();
     }
 
     public function getHome()
     {
-        return $this->select('title', 'slug', 'gallery_committee_category_id', 'description', 'image', 'location', 'date')->orderBy('id', 'desc')->paginate(6);
+        return $this->select('title', 'slug', 'gallery_committee_category_id', 'description', 'image', 'location', 'date')->orderBy('id', 'desc')->limit(6)->get();
     }
 
     public function getDetail($slug)
